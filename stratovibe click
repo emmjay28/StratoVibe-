@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guitarra Interactiva</title>
+  <style>
+    body { text-align: center; font-family: Arial, sans-serif; padding: 50px; }
+    .guitarra { margin-top: 20px; }
+    .boton-cuerda { padding: 10px; background-color: lightblue; margin: 5px; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Toca la Guitarra</h1>
+  <div class="guitarra">
+    <button class="boton-cuerda" onclick="tocarCuerda('cuerda1.mp3')">Cuerda 1</button>
+    <button class="boton-cuerda" onclick="tocarCuerda('cuerda2.mp3')">Cuerda 2</button>
+  </div>
+  <script>
+    function tocarCuerda(cuerda) {
+      const sonido = new Audio(cuerda);
+      sonido.play();
+    }
+  </script>
+</body>
+</html>
